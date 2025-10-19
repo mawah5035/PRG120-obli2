@@ -6,8 +6,9 @@ $db = "mawah5035";
 
 $db= mysqli_connect($host, $user, $pass, $db);
 
-if($db->connect_error) {
-    die("Tilkoblingsfeil:" . $db->connect_error);
+if (!$db) 
+    {
+    die("Tilkoblingsfeil: " . mysqli_connect_error());
 }
 
 ?>

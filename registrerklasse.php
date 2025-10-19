@@ -16,24 +16,28 @@
 <?php
 if (isset($_POST["registrerKlasseKnapp"]))
 {
-    $klassekode = $_POST["klassekode"];
-    $klassenavn = $_POST["klassenavn"];
-    $studiumkode = $_POST["studiumkode"];
+    $klassekode = trim($_POST["klassekode"]);
+    $klassenavn = trim($_POST["klassenavn"]);
+    $studiumkode = trim($_POST["studiumkode"]);
 
-    if (!$klassekode || !$klassenavn || !$studiumkode)
+    if (empty($klassekode) || empty($klassenavn) || empty($studiumkode))
     {
-        print("Alle felt m&aring; fylles ut");
-    }
+        echo "<p style= 'color:red;'> Alle felt m&aring; fylles ut!</p>";
+
+    
     else
     {
         include("db-tilkobling.php"); 
 
         $sqlSetning= "INSERT INTO klasse (klassekode, klassenavn, studiumkode)
         VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
-        mysqli_query($db, $sqlSetning) or die ("Ikke mulig &aring; registrere data i databasen");
-
-        print ("F&oslash;lgende klasse er n&aring; registrert: $klassekode $klassenavn $studiumkode");
-
+        if (mysqli_query($db, $sqlSetning)) {
+                echo "<p style='color:green;'>Følgende klasse er nå registrert: <strong>$klassekode, $klassenavn, $studiumkode</strong></p>";
+            } else {
+                echo "<p style='color:red;'>Feil ved registrering: " . mysqli_error($db) . "</p>";
+            }
     }
 }
+}
+
 ?>
