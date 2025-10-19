@@ -9,9 +9,12 @@
     <div>
     <a href="index.php"><button>Forside</button></a>
     <a href="registereklasse.php"><button>Registere klasse</button></a>
-    <a href="hobbier.html"><button>Hobbier</button></a>
-    <a href="userstories.html"><button>User Stories</button></a>
-    <a href="takk.html"><button>Takk!</button></a>
+    <a href="visalleklasser.php"><button>Vis alle klasser</button></a>
+    <a href="slettklasse.php"><button>Slett klasse</button></a>
+    <a href="registerestudenter.php"><button>Registere studenter</button></a>
+    <a href="visallestudneter.php"><button>Vis alle studenter</button></a>
+    <a href="slettstudent.php"><button>Slett student</button></a>
+
    </div>
 
 
