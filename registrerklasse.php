@@ -1,6 +1,8 @@
 <?php /*registere klasse*/
+?>
 
 <h3>Registere klasse</h3>
+
 <form method= "post" action="" id="registereklasseform" name="registereklasseform">
     Klassekode <input type="text" id="klassekode" name="klassekode" required /> <br/>
     Klassenavn <input type="text" id="klassenavn" name="klassenavn" required /> <br/>
@@ -10,4 +12,3 @@
 </form>
 
 
-?>
