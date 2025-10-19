@@ -12,11 +12,11 @@
 </form>
 
 <?php
-if (isset($_POST["registrerKlasseForm"]))
+if (isset($_POST["registrerKlasseKnapp"]))
 {
-    $klassekode = $_POST["Klassekode"];
-    $klassenavn = $_POST["Klassenavn"];
-    $studiumkode = $_POST["Studiumkode"];
+    $klassekode = $_POST["klassekode"];
+    $klassenavn = $_POST["klassenavn"];
+    $studiumkode = $_POST["studiumkode"];
 
     if (!$klassekode || !$klassenavn || !$studiumkode)
     {
@@ -27,8 +27,8 @@ if (isset($_POST["registrerKlasseForm"]))
         include("db-tilkobling.php"); 
 
         $sqlSetning= "INSERT INTO klasse (klassekode, klassenavn, studiumkode)
-        VALUES ('$klassekode', '$klassenavn', '$studiumkode');
-        mysqli_query(db,$sqlSetning) or die ("Ikke mulig &aring; registrere data i databasen");
+        VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
+        mysqli_query(db, $sqlSetning) or die ("Ikke mulig &aring; registrere data i databasen");
 
         print ("F&oslash;lgende klasse er n&aring; registrert: $klassekode $klassenavn $studiumkode");
 
