@@ -1,6 +1,8 @@
 <?php /*registere klasse*/
 ?>
 
+
+
 <h3>Registere klasse</h3>
 
 <form method="post" action="" id="registrerKlasseForm" name="registrerKlasseForm">

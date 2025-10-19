@@ -10,15 +10,15 @@
     
     <h2> Klasse: </h2>
     <ul>
-    <li><a href="registereklasse.php"><button>Registere klasse</button></a></li>
+    <li><a href="registrerklasse.php"><button>Registere klasse</button></a></li>
     <li><a href="visalleklasser.php"><button>Vis alle klasser</button></a></li>
     <li><a href="slettklasse.php"><button>Slett klasse</button></a></li>
     </ul>
 
     <h2> Studenter: </h2>
     <ul>
-    <li><a href="registerestudenter.php"><button>Registere studenter</button></a></li>
-    <li><a href="visallestudneter.php"><button>Vis alle studenter</button></a></li>
+    <li><a href="registrerstudenter.php"><button>Registere studenter</button></a></li>
+    <li><a href="visallestudenter.php"><button>Vis alle studenter</button></a></li>
     <li><a href="slettstudent.php"><button>Slett student</button></a></li>
     </ul>
 
