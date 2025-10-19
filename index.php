@@ -6,8 +6,9 @@
     <title>PRG120 obligatorisk arbeidskrav 2</title>
 </head>
 
-<a href="index.html"><button>Forside</button></a>
-    <a href="ommeg.html"><button>Om meg</button></a>
+    <div>
+    <a href="index.php"><button>Forside</button></a>
+    <a href="registereklasse.php"><button>Registere klasse</button></a>
     <a href="hobbier.html"><button>Hobbier</button></a>
     <a href="userstories.html"><button>User Stories</button></a>
     <a href="takk.html"><button>Takk!</button></a>
