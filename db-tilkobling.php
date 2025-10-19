@@ -6,7 +6,7 @@ $db = "mawah5035";
 
 $conn= mysqli_connect($host, $user, $pass, $db);
 
-if($conn->connect_error) {
+if($db->connect_error) {
     die("Tilkoblingsfeil:" . $conn->connect_error);
 }
 
