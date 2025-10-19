@@ -23,7 +23,7 @@ if (isset($_POST["registrerKlasseKnapp"]))
     if (empty($klassekode) || empty($klassenavn) || empty($studiumkode))
     {
         echo "<p style= 'color:red;'> Alle felt m&aring; fylles ut!</p>";
-
+}
     
     else
     {
