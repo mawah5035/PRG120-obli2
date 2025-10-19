@@ -15,17 +15,12 @@
     <li><a href="slettklasse.php"><button>Slett klasse</button></a></li>
     </ul>
 
-    <div>
-    
-    
-    <a href="registerestudenter.php"><button>Registere studenter</button></a>
-    <a href="visallestudneter.php"><button>Vis alle studenter</button></a>
-    <a href="slettstudent.php"><button>Slett student</button></a>
-
-   </div>
-
-
-<body>
+    <h2> Studenter </h2>
+    <ul>
+    <li><a href="registerestudenter.php"><button>Registere studenter</button></a></li>
+    <li><a href="visallestudneter.php"><button>Vis alle studenter</button></a></li>
+    <li><a href="slettstudent.php"><button>Slett student</button></a></li>
+    </ul>
     
 </body>
 </html>
