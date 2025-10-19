@@ -4,10 +4,10 @@ $user ="mawah5035";
 $pass = "5128mawah5035";
 $db = "mawah5035";
 
-$conn= mysqli_connect($host, $user, $pass, $db);
+$db= mysqli_connect($host, $user, $pass, $db);
 
 if($db->connect_error) {
-    die("Tilkoblingsfeil:" . $conn->connect_error);
+    die("Tilkoblingsfeil:" . $db->connect_error);
 }
 
 ?>
