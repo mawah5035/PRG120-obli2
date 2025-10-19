@@ -1,5 +1,5 @@
 <?php
-$host = "";
+$host = "b-studentsql-1.usn.no";
 $user ="mawah5035"; 
 $pass = "5128mawah5035";
 $db = "mawah5035";
