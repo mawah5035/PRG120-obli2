@@ -17,16 +17,17 @@ include("db-tilkobling.php");
     $resultat = mysqli_query($db, $sql);
 
     if (mysqli_num_rows($resultat) > 0) {
-        while ($rad = mysqli_fetch_assoc($resultat)) {
-            echo "<tr>; 
-            echo "<td>" . htmlspecialchars($rad['brukernavn']) . "</td>";
-            echo "<td>" . htmlspecialchars($rad['fornavn']) . "</td>";         
-            echo "<td>" . htmlspecialchars($rad['etternavn']) . "</td>";
-            echo "<td>" . htmlspecialchars($rad['klassekode']) . "</td>";
-            echo "</tr>";
-        }
-    } else {
-        echo "<tr><td colspan='4'>Ingen studenter funnet.</td></tr>";
+    while ($rad = mysqli_fetch_assoc($resultat)) {
+        echo "<tr>"; 
+        echo "<td>" . htmlspecialchars($rad['brukernavn']) . "</td>";
+        echo "<td>" . htmlspecialchars($rad['fornavn']) . "</td>";         
+        echo "<td>" . htmlspecialchars($rad['etternavn']) . "</td>";
+        echo "<td>" . htmlspecialchars($rad['klassekode']) . "</td>";
+        echo "</tr>";
     }
+} else {
+    echo "<tr><td colspan='4'>Ingen studenter funnet.</td></tr>";
+}
+
     ?>
 </table>
