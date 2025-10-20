@@ -5,7 +5,7 @@ include("db-tilkobling.php");
 <h3>Registrer student</h3>
 
 <form method="post" action="" id="registrerStudentForm" name="registrerStudentForm">
-    Brukernavn: <input type="text" id="brukernavn" name="brukernavn" required /> <br/>
+    Brukernavn: <input type="text" id="brukernavn" name="brukernavn" maxlength="10" required /> <br/>
     Fornavn: <input type="text" id="fornavn" name="fornavn" required /> <br/>
     Etternavn: <input type="text" id="etternavn" name="etternavn" required /> <br/>
 
