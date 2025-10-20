@@ -24,20 +24,25 @@ if (isset($_POST["registrerKlasseKnapp"]))
     {
         echo "<p style= 'color:red;'> Alle felt m&aring; fylles ut!</p>";
 }
-    
-    else
+     else
     {
         include("db-tilkobling.php"); 
 
-        $sqlSetning= "INSERT INTO klasse (klassekode, klassenavn, studiumkode)
-        VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
-        if (mysqli_query($db, $sqlSetning)) {
+        $sjekk = "SELECT * FROM klasse WHERE klassekode='$klassekode'";
+        $resultat = mysqli_query($db, $sjekk);
+
+        if (mysqli_num_rows($resultat) > 0) {
+            echo "<p style='color:red;'>Feil: Klassekoden <strong>$klassekode</strong> finnes allerede!</p>";
+        } else {
+            // 🔹 Sett inn ny klasse
+            $sqlSetning = "INSERT INTO klasse (klassekode, klassenavn, studiumkode)
+                           VALUES ('$klassekode', '$klassenavn', '$studiumkode')";
+            if (mysqli_query($db, $sqlSetning)) {
                 echo "<p style='color:green;'>Følgende klasse er nå registrert: <strong>$klassekode, $klassenavn, $studiumkode</strong></p>";
             } else {
                 echo "<p style='color:red;'>Feil ved registrering: " . mysqli_error($db) . "</p>";
             }
+        }
     }
 }
-
-
 ?>
