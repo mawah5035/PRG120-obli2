@@ -9,7 +9,7 @@ include("db-tilkobling.php");
 $sql= "SELECT * FROM klasse ORDER BY klassekode"; 
 $resultat= mysqli_query($db, $sql);
 
-if (mysqli_num_rows(resultat) == 0)
+if (mysqli_num_rows($resultat) == 0)
 {
     echo "<p> Det finnes ingen registerte klasser i databasen.</p>";
 
