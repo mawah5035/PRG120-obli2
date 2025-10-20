@@ -2,6 +2,7 @@
 include("db-tilkobling.php");
 ?>
 
+
 <h3>Slett klasse</h3>
 <form method="post" action="" id="slettKlasseForm" name="slettKlasseForm" onSubmit="return bekreft()">
     <select name ="klassekode" id="klassekode" required>
@@ -23,6 +24,12 @@ include("db-tilkobling.php");
     <br><br>
     <input type="submit" value="Slett klasse" id="slettKlasseKnapp" name="slettKlasseKnapp"/>
 </form>
+
+<script>
+function bekreft() {
+    return confirm("Er du sikker på at du vil slette denne studenten?");
+}
+</script>
 
 <?php
 
