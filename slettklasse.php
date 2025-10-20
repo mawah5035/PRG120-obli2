@@ -36,15 +36,10 @@ if (isset($_POST["slettKlasseKnapp"]))
     }
     else
     {
-        $skjekk= "SELECT * FROM klasse WHERE klassekode='$klassekode'";
+        $skjekk= "SELECT * FROM student WHERE klassekode='$klassekode'";
         $resultat= mysqli_query($db, $skjekk);
 
-        if (mysqli_num_rows($resultat) == 0)
-        {
-            echo "<p style='color:red;'> Feil: Klassen med klassekode <strong>$klassekode</strong> finnes ikke!</p>";
-        }
-        else
-        {
+        if (mysqli_num_rows($resultat) == 0){
             $sql = "DELETE FROM klasse WHERE klassekode='$klassekode'";
             if (mysqli_query($db, $sql))
             {
@@ -55,6 +50,10 @@ if (isset($_POST["slettKlasseKnapp"]))
                 echo "<p style='color:red;'> Feil ved sletting: " . mysqli_error($db) . "</p>";
             }
         }
+        else{
+            echo "<p style='color:red;'> Feil: Kan ikke slette klasse med studenter i </p>";
+        }
+
     }
 }
 ?>
