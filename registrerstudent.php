@@ -29,17 +29,20 @@ include("db-tilkobling.php");
 </form>
 
 <?php
-if (isset($_POST["registrerStudentKnapp"])) {
+if (isset($_POST["registrerStudentKnapp"])) 
+    {
     $brukernavn = trim($_POST["brukernavn"]);
     $fornavn = trim($_POST["fornavn"]);
     $etternavn = trim($_POST["etternavn"]);
     $klassekode = trim($_POST["klassekode"]);
 
-    if (empty($brukernavn) || empty($fornavn) || empty($etternavn) || empty($klassekode)) {
+    if (empty($brukernavn) || empty($fornavn) || empty($etternavn) || empty($klassekode))
+     {
         echo "<p style='color:red;'>Alle felt må fylles ut!</p>";
      }
-    // Sjekk lengde på brukernavn
-    elseif (strlen($brukernavn) > 10) {
+    
+    elseif (strlen($brukernavn) > 10) 
+    {
         echo "<p style='color:red;'>Feil: Brukernavnet kan ikke være mer enn 10 tegn!</p>";
     } 
 
@@ -49,18 +52,22 @@ if (isset($_POST["registrerStudentKnapp"])) {
         $sjekk = "SELECT * FROM student WHERE brukernavn='$brukernavn'";
         $resultat = mysqli_query($db, $sjekk);
 
-        if (mysqli_num_rows($resultat) > 0) {
+        if (mysqli_num_rows($resultat) > 0) 
+        {
             echo "<p style='color:red;'>Feil: Brukernavnet <strong>$brukernavn</strong> finnes allerede!</p>";
-        } else {
+        } else 
+        {
             $sqlSetning = "INSERT INTO student (brukernavn, fornavn, etternavn, klassekode)
                            VALUES ('$brukernavn', '$fornavn', '$etternavn', '$klassekode')";
-            if (mysqli_query($db, $sqlSetning)) {
+            if (mysqli_query($db, $sqlSetning)) 
+            {
                 echo "<p style='color:green;'>Følgende student er nå registrert: 
                       <strong>$brukernavn, $fornavn, $etternavn, $klassekode</strong></p>";
-            } else {
+            } else 
+            {
                 echo "<p style='color:red;'>Feil ved registrering: " . mysqli_error($db) . "</p>";
             }
         }
     }
-}
+
 ?>
