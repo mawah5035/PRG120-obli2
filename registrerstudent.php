@@ -37,7 +37,15 @@ if (isset($_POST["registrerStudentKnapp"])) {
 
     if (empty($brukernavn) || empty($fornavn) || empty($etternavn) || empty($klassekode)) {
         echo "<p style='color:red;'>Alle felt må fylles ut!</p>";
-    } else {
+     }
+    // Sjekk lengde på brukernavn
+    elseif (strlen($brukernavn) > 10) {
+        echo "<p style='color:red;'>Feil: Brukernavnet kan ikke være mer enn 10 tegn!</p>";
+    } 
+
+    } 
+    else 
+    {
         $sjekk = "SELECT * FROM student WHERE brukernavn='$brukernavn'";
         $resultat = mysqli_query($db, $sjekk);
 
