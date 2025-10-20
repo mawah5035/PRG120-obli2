@@ -17,7 +17,7 @@
 
     <h2> Studenter: </h2>
     <ul>
-    <li><a href="registrerstudenter.php"><button>Registere studenter</button></a></li>
+    <li><a href="registrerstudent.php"><button>Registere studenter</button></a></li>
     <li><a href="visallestudenter.php"><button>Vis alle studenter</button></a></li>
     <li><a href="slettstudent.php"><button>Slett student</button></a></li>
     </ul>
