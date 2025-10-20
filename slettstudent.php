@@ -1,8 +1,10 @@
 <?php
 include("db-tilkobling.php"); // kobler til databasen
+?>
 
 <h3>Slett student</h3>
 
+<?php
 if (isset($_GET['brukernavn'])) {
     $brukernavn = $_GET['brukernavn'];
 
